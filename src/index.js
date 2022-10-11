@@ -5,19 +5,19 @@ const Alert = (props) => {
   if (props.color === "red")
     return (
       <div className="alert alert-danger" role="alert">
-        This is a danger alert—check it out!
+        {props.text}
       </div>
     );
   if (props.color === "orange")
     return (
       <div className="alert alert-warning" role="alert">
-        This is a warning alert—check it out!
+        {props.text}
       </div>
     );
   if (props.color === "green")
     return (
       <div className="alert alert-success" role="alert">
-        This is a success alert—check it out!
+        {props.text}
       </div>
     );
 };
@@ -27,7 +27,7 @@ const Alert = (props) => {
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <div>
-    <Alert text="OMG! Something really bad has happended!" color="red" />
+    <Alert text="OMG! Something really bad has happened!" color="red" />
     <Alert text="Well, it is not that bad after all!" color="orange" />
     <Alert text="I am supposed to be green" color="green" />
   </div>
